@@ -1,5 +1,10 @@
 ---
 title: "Multivariate stochastic dominance via optimal transport and applications to models benchmarking"
+authors: 'G. Rioux, A. Nitsure, M. Rigotti, K, Greenewald, and Y. Mroueh'
+journal: 'Advances in Neural Information Processing Systems (NeurIPS 2024)'
+numberInfo: '37'
+year: '2024'
+pages: 'pp.39190-39223'
 collection: publications
 category: manuscripts
 permalink: /publication/rioux2024multivariate

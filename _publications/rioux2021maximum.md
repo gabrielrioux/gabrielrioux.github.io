@@ -2,7 +2,7 @@
 title: "The Maximum Entropy on the Mean Method for Image Deblurring"
 collection: publications
 category: manuscripts
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: /publication/rioux2021maximum
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2021-10-02
 venue: 'Inverse Problems'

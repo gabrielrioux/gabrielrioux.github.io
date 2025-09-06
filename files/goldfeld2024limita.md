@@ -1,4 +1,3 @@
-```text
 @article{goldfeld2024limit,
 author = {Ziv Goldfeld and Kengo Kato and Sloan Nietert and Gabriel Rioux},
 title = {{Limit distribution theory for smooth p-Wasserstein distances}},
@@ -12,4 +11,4 @@ year = {2024},
 doi = {10.1214/23-AAP2028},
 URL = {https://doi.org/10.1214/23-AAP2028}
 }
-```
+

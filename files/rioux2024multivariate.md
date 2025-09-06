@@ -1,4 +1,3 @@
-```text
 @inproceedings{rioux2024multivariate,
  author = {Rioux, Gabriel and Nitsure, Apoorva and Rigotti, Mattia and Greenewald, Kristjan and Mroueh, Youssef},
  booktitle = {Advances in Neural Information Processing Systems},
@@ -10,4 +9,4 @@
  volume = {37},
  year = {2024}
 }
-```
+

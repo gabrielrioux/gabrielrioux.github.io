@@ -25,8 +25,8 @@
           alt="">
       </div>
     {% endif %}
-
-            {% if post.collection == 'teaching' and {{ post.date | default: "1900-01-01" | date: "%m" }}>1 %}
+            {% assign month = post.date | default: "1900-01-01" | date: "%m" %}
+            {% if post.collection == 'teaching' and month >1 %}
           <p> {{ post.type }}, {{ post.title }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% endif %}
 

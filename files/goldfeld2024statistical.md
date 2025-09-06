@@ -1,4 +1,3 @@
-```text
 @article{goldfeld2024statistical,
     author = {Goldfeld, Ziv and Kato, Kengo and Rioux, Gabriel and Sadhu, Ritwik},
     title = {Statistical inference with regularized optimal transport},
@@ -13,4 +12,3 @@
     url = {https://doi.org/10.1093/imaiai/iaad056},
     eprint = {https://academic.oup.com/imaiai/article-pdf/13/1/iaad056/57003599/iaad056.pdf},
 }
-```

@@ -1,5 +1,5 @@
 ---
-title: "Limit Theorems for Entropic Optimal Transport Maps and the Sinkhorn Divergence"
+title: "Limit theorems for entropic optimal transport maps and the Sinkhorn divergence"
 collection: publications
 category: manuscripts
 permalink: /publication/goldfeld2024limit2
@@ -9,5 +9,5 @@ slidesurl:
 arxivurl: 'https://arxiv.org/abs/2207.08683'
 paperurl: 'https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-18/issue-1/Limit-theorems-for-entropic-optimal-transport-maps-and-Sinkhorn-divergence/10.1214/24-EJS2217.full'
 bibtexurl: 'http://gabrielrioux.github.io/files/goldfeld2024b.md'
-citation: 'Z. Goldfeld, K. Kato, S. Nietert, and G. Rioux. &quot;Limit Theorems for Entropic Optimal Transport Maps and the Sinkhorn Divergence.&quot; <i>Electronic Journal of Statistics</i>. 34(2), 18(1), 2024, pp.980-1041.'
+citation: 'Z. Goldfeld, K. Kato, S. Nietert, and G. Rioux. &quot;Limit theorems for entropic optimal transport maps and the Sinkhorn divergence.&quot; <i>Electronic Journal of Statistics</i>. 34(2), 18(1), 2024, pp.980-1041.'
 ---

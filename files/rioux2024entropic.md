@@ -1,4 +1,3 @@
-```text
 @article{rioux2024entropic,
   author  = {Gabriel Rioux and Ziv Goldfeld and Kengo Kato},
   title   = {Entropic {G}romov-{W}asserstein Distances: Stability and Algorithms},
@@ -9,4 +8,3 @@
   pages   = {1--52},
   url     = {http://jmlr.org/papers/v25/24-0039.html}
 }
-```

@@ -8,6 +8,6 @@ venue: 'Information and Inference: A Journal of the IMA'
 slidesurl: 
 arxivurl: 'https://arxiv.org/abs/2205.04283'
 paperurl: 'https://academic.oup.com/imaiai/article/13/1/iaad056/7600463'
-bibtexurl: 'http://gabrielrioux.github.io/files/goldfeld2024statistical.bib'
+bibtexurl: 'http://gabrielrioux.github.io/files/goldfeld2024statistical.md'
 citation: 'Z. Goldfeld, K. Kato, G. Rioux, and R. Sadhu. &quot;Statistical inference with regularized optimal transport.&quot; <i>Information and Inference: A Journal of the IMA</i>. 13(1), 2024.'
 ---

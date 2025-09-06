@@ -1,4 +1,3 @@
-```text
 @ARTICLE{rioux2021blind,
   author={Rioux, Gabriel and Scarvelis, Christopher and Choksi, Rustum and Hoheisel, Tim and Maréchal, Pierre},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
@@ -9,4 +8,4 @@
   pages={77-88},
   keywords={Entropy;Kernel;Estimation;Probability distribution;Cameras;Noise reduction;Blind deblurring;denoising;symbology;QR barcode;UPC barcode;maximum entropy on the mean;Kullback-Leibler divergence;Fenchel-Rockafellar duality;L-BFGS},
   doi={10.1109/TPAMI.2019.2927311}}
-```
+

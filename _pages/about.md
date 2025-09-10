@@ -19,8 +19,8 @@ Its definition is akin to the standard optimal transport problem with the import
 
 Awards and Fellowships
 ======
-* 2022-2025: Natural Sciences and Engineering Research Council of Canada (NSERC) Postgraduate Scholarship - Doctoral (PGS D) recipient.
-* 2019-2020: Natural Sciences and Engineering Research Council of Canada (NSERC) Alexander Graham Bell Canada Graduate Scholarship - Master's (CGS M) recipient.
-* 2019-2020: Kenneth Eade Fellow.
-* Fall 2018: McGill University Undergraduate Research Conference Poster Presentation 1st Prize in Computational and Mathematical Sciences Category.
-* Summer 2018: McGill University Science Undergraduate Research Award (SURA) Recipient.
+* 2022-2025: Natural Sciences and Engineering Research Council of Canada ([NSERC](https://www.nserc-crsng.gc.ca/index_eng.asp)) Postgraduate Scholarship - Doctoral ([PGS D](https://www.nserc-crsng.gc.ca/NSERC-CRSNG/FundingDecisions-DecisionsFinancement/ScholarshipsAndFellowships-ConcoursDeBourses/index_eng.asp?Year=2022)) recipient.
+* 2019-2020: Natural Sciences and Engineering Research Council of Canada ([NSERC](https://www.nserc-crsng.gc.ca/index_eng.asp)) Alexander Graham Bell Canada Graduate Scholarship - Master's ([CGS M](https://www.nserc-crsng.gc.ca/students-etudiants/pg-cs/cgsm-bescm_eng.asp)) recipient.
+* 2019-2020: [Kenneth Eade Fellow](https://www.mcgill.ca/internalawards/faculty/science).
+* Fall 2018: McGill University [Undergraduate Research Conference](https://www.mcgill.ca/science/research/undergraduate-research/urc/2018) Poster Presentation 1st Prize in Computational and Mathematical Sciences Category.
+* Summer 2018: McGill University Science Undergraduate Research Award ([SURA](https://www.mcgill.ca/science/research/undergraduate-research/sura)) Recipient.

@@ -10,3 +10,28 @@ author_profile: true
 {% for post in site.teaching reversed %}
   {% include archive-single.html %}
 {% endfor %}
+
+<H1> Comments and Feedback </H1>
+
+    You can send me anonymous feedback about about teaching or courses below
+<form
+class="comment-form"
+  action="https://formspree.io/f/xjkakqro"
+  method="POST"
+>
+  <label>
+    <textarea name="message",
+  rows= "4", cols = "10"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
+<style>
+.comment-form,
+.comment-form input,
+.comment-form textarea,
+.comment-form label {
+  color: #222 !important;
+}
+</style>

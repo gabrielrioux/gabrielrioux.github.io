@@ -14,5 +14,5 @@ slidesurl:
 arxivurl: 'https://arxiv.org/abs/2509.20031'
 paperurl: 
 bibtexurl: 'http://gabrielrioux.github.io/files/rioux2025approximation.md'
-citation: 'V. Karumanchi, G. Rioux, and Z. Goldfeld. &quot;Approximation Analysis of the Entropic Penalty in Quadratic Programming.&quot; <i>arXiv preprint</i>. arXiv:2509.20031, 2025.'
+citation: 'V. Karumanchi<sup>★</sup>, G. Rioux<sup>★</sup>, and Z. Goldfeld. &quot;Approximation Analysis of the Entropic Penalty in Quadratic Programming.&quot; <i>arXiv preprint</i>. arXiv:2509.20031, 2025.'
 ---

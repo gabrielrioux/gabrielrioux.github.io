@@ -1,6 +1,6 @@
 ---
 title: "Sliced Inner Product Gromov-Wasserstein Distances"
-authors: 'X. Gong, G. Rioux, and Z. Goldfeld'
+authors: 'X. Gong<sup>★</sup>, G. Rioux<sup>★</sup>, and Z. Goldfeld'
 journal: 'arXiv preprint'
 numberInfo: 'arXiv:2605.08546'
 year: '2026'

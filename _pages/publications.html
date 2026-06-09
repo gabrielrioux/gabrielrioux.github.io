@@ -17,7 +17,7 @@ author_profile: true
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     <h2>{{ category[1].title }}</h2><hr />
-    <div>First authors are denoted by a star, all authors share joint first authorship unless otherwise denoted</div>
+    <div><p>First authors are denoted by a star, all authors share joint first authorship unless otherwise denoted</p></div>
 <ul>
     {% for post in site.publications reversed %}
       {% if post.category != category[0] %}

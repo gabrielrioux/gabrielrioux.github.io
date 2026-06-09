@@ -9,5 +9,5 @@ venue: 'IEEE Transactions on Pattern Analysis and Machine Intelligence'
 slidesurl: 
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/8758192'
 bibtexurl: 'http://gabrielrioux.github.io/files/rioux2021blind.md'
-citation: 'G. Rioux, C. Scarvelis, R. Choksi, T. Hoheisel, and P. Maréchal. &quot;Blind Deblurring of Barcodes via Kullback-Leibler Divergence.&quot; <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>. 43(1), 2021, pp.77-88.'
+citation: 'G. Rioux<sup>★</sup>, C. Scarvelis<sup>★</sup>, R. Choksi, T. Hoheisel, and P. Maréchal. &quot;Blind Deblurring of Barcodes via Kullback-Leibler Divergence.&quot; <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>. 43(1), 2021, pp.77-88.'
 ---

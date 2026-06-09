@@ -14,5 +14,5 @@ slidesurl:
 arxivurl: 'https://arxiv.org/abs/2410.18006'
 paperurl: 
 bibtexurl: 'http://gabrielrioux.github.io/files/rioux2024limit.md'
-citation: 'G. Rioux, Z. Goldfeld, and K. Kato. &quot;Limit Laws for Gromov-Wasserstein Alignment with Applications to Testing Graph Isomorphisms.&quot; <i>arXiv preprint</i>. arXiv:2410.18006, 2024.'
+citation: 'G. Rioux<sup>★</sup>, Z. Goldfeld, and K. Kato. &quot;Limit Laws for Gromov-Wasserstein Alignment with Applications to Testing Graph Isomorphisms.&quot; <i>arXiv preprint</i>. arXiv:2410.18006, 2024.'
 ---

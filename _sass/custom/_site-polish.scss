@@ -1,0 +1,627 @@
+/* ========================================================================== 
+   Gabriel Rioux — site polish layer
+
+   Purpose: modernize the existing Academic Pages / Minimal Mistakes site
+   without changing its content model, Liquid templates, two-column desktop
+   structure, or top navigation.
+   ========================================================================== */
+
+:root {
+  /* Nord-inspired base palette. These global overrides are intentionally
+     declared after the Academic Pages theme imports, so the existing theme
+     structure and dark-mode toggle continue to work. */
+  --global-base-color: #5e81ac;
+  --global-bg-color: #eceff4;
+  --global-footer-bg-color: #e5e9f0;
+  --global-border-color: #d8dee9;
+  --global-dark-border-color: #4c566a;
+  --global-code-background-color: #e5e9f0;
+  --global-code-text-color: #2e3440;
+  --global-fig-caption-color: #4c566a;
+  --global-link-color: #5e81ac;
+  --global-link-color-hover: #4c6f99;
+  --global-link-color-visited: #7b6b8f;
+  --global-masthead-link-color: #3b4252;
+  --global-masthead-link-color-hover: #5e81ac;
+  --global-text-color: #2e3440;
+  --global-text-color-light: #4c566a;
+  --global-thead-color: #e5e9f0;
+
+  --gr-surface: #f8fafc;
+  --gr-surface-soft: #eceff4;
+  --gr-card-border: rgba(76, 86, 106, 0.16);
+  --gr-card-border-strong: rgba(76, 86, 106, 0.26);
+  --gr-accent: #5e81ac;
+  --gr-accent-2: #81a1c1;
+  --gr-accent-soft: rgba(129, 161, 193, 0.16);
+  --gr-shadow: 0 16px 44px rgba(46, 52, 64, 0.09);
+  --gr-shadow-soft: 0 8px 24px rgba(46, 52, 64, 0.07);
+  --gr-radius: 18px;
+  --gr-radius-sm: 12px;
+  --gr-canvas:
+    radial-gradient(circle at 8% 0%, rgba(136, 192, 208, 0.17), transparent 30rem),
+    linear-gradient(180deg, #e5e9f0 0%, var(--global-bg-color) 32rem);
+}
+
+html[data-theme="dark"] {
+  --global-base-color: #88c0d0;
+  --global-bg-color: #2e3440;
+  --global-footer-bg-color: #2e3440;
+  --global-border-color: #4c566a;
+  --global-dark-border-color: #d8dee9;
+  --global-code-background-color: #3b4252;
+  --global-code-text-color: #e5e9f0;
+  --global-fig-caption-color: #d8dee9;
+  --global-link-color: #88c0d0;
+  --global-link-color-hover: #8fbcbb;
+  --global-link-color-visited: #b48ead;
+  --global-masthead-link-color: #e5e9f0;
+  --global-masthead-link-color-hover: #88c0d0;
+  --global-text-color: #eceff4;
+  --global-text-color-light: #d8dee9;
+  --global-thead-color: #434c5e;
+
+  --gr-surface: #3b4252;
+  --gr-surface-soft: #434c5e;
+  --gr-card-border: rgba(216, 222, 233, 0.15);
+  --gr-card-border-strong: rgba(216, 222, 233, 0.25);
+  --gr-accent: #88c0d0;
+  --gr-accent-2: #8fbcbb;
+  --gr-accent-soft: rgba(136, 192, 208, 0.13);
+  --gr-shadow: 0 18px 48px rgba(18, 21, 27, 0.30);
+  --gr-shadow-soft: 0 8px 24px rgba(18, 21, 27, 0.24);
+  --gr-canvas:
+    radial-gradient(circle at 8% 0%, rgba(94, 129, 172, 0.24), transparent 30rem),
+    linear-gradient(180deg, #2e3440 0%, var(--global-bg-color) 32rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--gr-canvas);
+  line-height: 1.7;
+  letter-spacing: -0.005em;
+}
+
+/* --- Top navigation ------------------------------------------------------ */
+
+.masthead {
+  background: rgba(236, 239, 244, 0.90);
+  border-bottom: 1px solid var(--gr-card-border);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.42);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+html[data-theme="dark"] .masthead {
+  background: rgba(46, 52, 64, 0.91);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.masthead::after {
+  display: none;
+}
+
+.masthead__inner-wrap {
+  max-width: 1200px !important;
+  padding: 0.65rem 1.25rem;
+}
+
+.greedy-nav {
+  background: transparent;
+}
+
+.greedy-nav a {
+  margin: 0 0.15rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.93rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+.greedy-nav .visible-links li:first-child a {
+  margin-left: 0;
+  padding-left: 0.2rem;
+  padding-right: 1.1rem;
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.greedy-nav .visible-links a::before {
+  display: none;
+}
+
+.greedy-nav .masthead__menu-item:not(.masthead__menu-item--lg) > a:hover,
+.greedy-nav .masthead__menu-item:not(.masthead__menu-item--lg) > a:focus-visible {
+  color: var(--global-link-color-hover);
+  background: var(--gr-accent-soft);
+}
+
+#theme-toggle a {
+  width: 2.15rem !important;
+  height: 2.15rem;
+  margin-left: 0.35rem;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gr-card-border);
+  background: var(--gr-surface-soft);
+}
+
+/* --- Main two-column layout -------------------------------------------- */
+
+#main {
+  max-width: 1280px !important;
+  margin-top: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.page,
+.archive {
+  min-width: 0;
+}
+
+.page__inner-wrap,
+.archive {
+  background: var(--gr-surface);
+  border: 1px solid var(--gr-card-border);
+  border-radius: var(--gr-radius);
+  box-shadow: var(--gr-shadow);
+}
+
+.page__inner-wrap {
+  padding: clamp(1.4rem, 3.2vw, 2.6rem);
+}
+
+.archive {
+  padding: clamp(1.8rem, 4vw, 3.15rem);
+  box-shadow: var(--gr-shadow-soft);
+}
+
+@media screen and (min-width: 925px) {
+  #main {
+    display: grid;
+    grid-template-columns: minmax(235px, 290px) minmax(0, 1fr);
+    column-gap: clamp(2.75rem, 4.5vw, 4.75rem);
+    align-items: start;
+  }
+
+  #main > .sidebar {
+    grid-column: 1;
+    width: auto !important;
+    max-width: none !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-self: start;
+  }
+
+  #main > .page,
+  #main > .archive {
+    grid-column: 2;
+    width: auto !important;
+    float: none !important;
+    margin: 0 !important;
+  }
+
+  /* .page contains its own padded .page__inner-wrap, while .archive is the
+     padded content surface itself. Keep the archive padding intact. */
+  #main > .page {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #main > .archive {
+    padding: clamp(1.6rem, 3vw, 2.4rem) clamp(1.8rem, 3.6vw, 3rem) !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main > .sidebar {
+    position: sticky !important;
+    top: 92px;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* --- Profile/sidebar ---------------------------------------------------- */
+
+.sidebar > div[itemscope] {
+  padding: 1.15rem;
+  background: var(--gr-surface);
+  border: 1px solid var(--gr-card-border);
+  border-radius: var(--gr-radius);
+  box-shadow: var(--gr-shadow-soft);
+}
+
+.author__avatar {
+  width: 72px;
+}
+
+.author__avatar img {
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+  object-position: center 35%;
+  padding: 0 !important;
+  border: 2px solid var(--gr-card-border) !important;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(46, 52, 64, 0.10);
+}
+
+.author__name {
+  color: var(--global-text-color);
+  font-size: 1.15rem !important;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.author__bio {
+  color: var(--global-text-color);
+  line-height: 1.55;
+  opacity: 0.84;
+}
+
+.author__urls {
+  margin-top: 0.85rem !important;
+  padding-top: 0.75rem !important;
+  border-top: 1px solid var(--gr-card-border) !important;
+}
+
+.author__urls li {
+  margin: 0.15rem 0;
+  line-height: 1.4;
+}
+
+.author__urls a,
+.author__urls li {
+  font-size: 0.82rem !important;
+}
+
+.author__urls i {
+  color: var(--gr-accent);
+}
+
+.author__urls a:hover {
+  color: var(--global-link-color-hover);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 925px) {
+  .author__avatar {
+    display: block;
+    width: 100%;
+  }
+
+  .author__avatar img {
+    width: 152px;
+    height: 152px;
+    margin: 0 auto 1rem;
+  }
+
+  .author__content {
+    display: block;
+    padding: 0;
+    text-align: center;
+  }
+
+  .author__name {
+    margin: 0 0 0.45rem !important;
+  }
+
+  .author__bio {
+    margin: 0 0 1rem !important;
+    text-align: left;
+  }
+}
+
+/* --- Typography and content ------------------------------------------- */
+
+.page__title {
+  margin-bottom: 1.5rem;
+  color: var(--global-text-color);
+  font-size: clamp(1.8rem, 2.8vw, 2.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.page__content {
+  font-size: 1.01rem;
+}
+
+.page__content p,
+.page__content li,
+.archive p,
+.archive li {
+  line-height: 1.72;
+}
+
+.page__content h2,
+.archive h2 {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--gr-card-border);
+  color: var(--global-text-color);
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+
+.page__content h2::after,
+.archive h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 3.25rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--gr-accent);
+}
+
+.page__content h3,
+.archive h3 {
+  letter-spacing: -0.015em;
+}
+
+.page__content a,
+.archive a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  text-decoration-color: var(--global-border-color);
+}
+
+.page__content a:hover,
+.archive a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.page__content ul,
+.page__content ol {
+  padding-left: 1.3rem;
+}
+
+.page__content li::marker {
+  color: var(--gr-accent);
+}
+
+hr {
+  border-top-color: var(--gr-card-border);
+}
+
+/* --- Publications and archive pages ----------------------------------- */
+
+.archive > h1.page__title {
+  margin-bottom: 1.65rem;
+}
+
+.archive h2 + hr {
+  display: none;
+}
+
+.publication-note {
+  margin: -0.35rem 0 1.15rem;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
+.publication-note p {
+  margin: 0;
+}
+
+.publication-section-heading {
+  margin-top: 1.85rem !important;
+  margin-bottom: 0.35rem;
+}
+
+.publication-list {
+  margin-top: 0.25rem !important;
+}
+
+/*
+ * Keep publications and courses visually close to a traditional academic
+ * list: compact vertical rhythm, no individual cards, and quiet dividers.
+ */
+.archive > ul {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.archive > ul > li,
+.archive .list__item {
+  margin: 0;
+  padding: 0.55rem 0 0.65rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--gr-card-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.archive > ul > li:first-child,
+.archive .list__item:first-of-type {
+  padding-top: 0.15rem;
+}
+
+.archive > ul > li:last-child,
+.archive .list__item:last-child {
+  border-bottom: 0;
+}
+
+.archive > ul > li:hover,
+.archive .list__item:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.archive__item-title {
+  margin-top: 0 !important;
+  margin-bottom: 0.12rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.archive__item-excerpt {
+  margin-bottom: 0;
+  color: var(--global-text-color);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  opacity: 0.82;
+}
+
+.archive .list__item p,
+.archive > ul > li p {
+  margin-top: 0.15rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+
+.archive .list__item p:last-child,
+.archive > ul > li p:last-child {
+  margin-bottom: 0;
+}
+
+.archive__item:hover .archive__item-title {
+  text-decoration: none;
+}
+
+/* --- Teaching feedback form ------------------------------------------- */
+
+.comment-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--gr-surface-soft);
+  border: 1px solid var(--gr-card-border);
+  border-radius: var(--gr-radius-sm);
+}
+
+.comment-form label {
+  display: block;
+}
+
+.comment-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  margin: 0 0 0.8rem;
+  padding: 0.8rem 0.9rem;
+  resize: vertical;
+  color: var(--global-text-color) !important;
+  background: var(--gr-surface);
+  border: 1px solid var(--gr-card-border-strong);
+  border-radius: 10px;
+  font: inherit;
+  line-height: 1.5;
+}
+
+.comment-form textarea:focus {
+  outline: 3px solid var(--gr-accent-soft);
+  border-color: var(--gr-accent);
+}
+
+.comment-form button {
+  padding: 0.65rem 1rem;
+  color: #eceff4;
+  background: #5e81ac;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+html[data-theme="dark"] .comment-form button {
+  color: #2e3440;
+}
+
+.comment-form button:hover {
+  filter: brightness(0.94);
+  transform: translateY(-1px);
+}
+
+/* --- Footer ------------------------------------------------------------- */
+
+.page__footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--gr-card-border);
+}
+
+/* --- Focus, motion, and responsive refinements ------------------------ */
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gr-accent-soft);
+  outline-offset: 3px;
+}
+
+@media screen and (max-width: 924px) {
+  #main {
+    margin-top: 1.4rem;
+  }
+
+  .sidebar {
+    margin-bottom: 1.25rem;
+  }
+
+  .sidebar > div[itemscope] {
+    padding: 0.95rem;
+  }
+
+  .page__inner-wrap,
+  .archive {
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .masthead__inner-wrap {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  #main {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .page__inner-wrap,
+  .archive {
+    padding: 1.15rem;
+    box-shadow: var(--gr-shadow-soft);
+  }
+
+  .page__title {
+    font-size: 1.72rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .page__inner-wrap,
+  .archive,
+  .sidebar > div[itemscope] {
+    border: 0;
+    box-shadow: none;
+  }
+}

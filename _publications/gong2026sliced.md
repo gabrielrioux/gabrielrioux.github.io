@@ -1,7 +1,7 @@
 ---
 title: "Sliced Inner Product Gromov-Wasserstein Distances"
 authors: 'X. Gong, G. Rioux, and Z. Goldfeld'
-journal: 'arXiv preprint'
+journal: 'Advances in Neural Information Processing Systems (NeurIPS 2026)'
 numberInfo: 'arXiv:2605.08546'
 year: '2026'
 pages: 

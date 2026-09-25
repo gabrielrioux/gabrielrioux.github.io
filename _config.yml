@@ -22,7 +22,7 @@ repository               : "gabrielrioux/gabrielrioux.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "thumbnail2.jpg"
+  avatar           : "avatar.jpg"
   name             : "Gabriel Rioux"
   pronouns         : # example: "she/her"  
   bio              : "I will be joining Purdue University as an Assistant Professor in Statistics"

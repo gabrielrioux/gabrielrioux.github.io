@@ -12,25 +12,78 @@ author_profile: true
 -->
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<div class="publication-note">
+  <p>First authors are denoted by a star; all authors share joint first authorship unless otherwise denoted.</p>
+</div>
 
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    <h2>{{ category[1].title }}</h2><hr />
-    <div><p>First authors are denoted by a star, all authors share joint first authorship unless otherwise denoted</p></div>
-<ul>
+{% comment %}
+A publication can be classified explicitly by adding one of these fields to
+its front matter:
+
+  publication_type: preprint
+  publication_type: publication
+
+For existing entries without publication_type, a venue containing the word
+"preprint" is treated as a preprint. Everything else is shown as a publication.
+This keeps the current collection files working without a mass metadata edit.
+{% endcomment %}
+
+{% assign preprint_count = 0 %}
+{% for post in site.publications %}
+  {% assign publication_type = post.publication_type | default: "" | downcase %}
+  {% assign venue_text = post.venue | default: "" | downcase %}
+  {% assign is_preprint = false %}
+  {% if publication_type == "preprint" %}
+    {% assign is_preprint = true %}
+  {% elsif publication_type != "publication" and venue_text contains "preprint" %}
+    {% assign is_preprint = true %}
+  {% endif %}
+  {% if is_preprint %}
+    {% assign preprint_count = preprint_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign total_count = site.publications | size %}
+{% assign publication_count = total_count | minus: preprint_count %}
+
+{% if preprint_count > 0 %}
+  <h2 class="publication-section-heading">Preprints</h2>
+  <ul class="publication-list">
     {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
+      {% assign publication_type = post.publication_type | default: "" | downcase %}
+      {% assign venue_text = post.venue | default: "" | downcase %}
+      {% assign is_preprint = false %}
+      {% if publication_type == "preprint" %}
+        {% assign is_preprint = true %}
+      {% elsif publication_type != "publication" and venue_text contains "preprint" %}
+        {% assign is_preprint = true %}
+      {% endif %}
+      {% unless is_preprint %}
+        {% continue %}
+      {% endunless %}
+      <li>{% include archive-single.html %}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% if publication_count > 0 %}
+  <h2 class="publication-section-heading">Publications</h2>
+  <ul class="publication-list">
+    {% for post in site.publications reversed %}
+      {% assign publication_type = post.publication_type | default: "" | downcase %}
+      {% assign venue_text = post.venue | default: "" | downcase %}
+      {% assign is_preprint = false %}
+      {% if publication_type == "preprint" %}
+        {% assign is_preprint = true %}
+      {% elsif publication_type != "publication" and venue_text contains "preprint" %}
+        {% assign is_preprint = true %}
+      {% endif %}
+      {% if is_preprint %}
         {% continue %}
       {% endif %}
       <li>{% include archive-single.html %}</li>
     {% endfor %}
-</ul>
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+  </ul>
 {% endif %}
 
 

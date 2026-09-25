@@ -9,7 +9,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/gong2026approximation
 date: 2026-05-08
-venue: 'arXiv preprint arXiv:2605.08546'
+venue: 'Advances in Neural Information Processing Systems (NeurIPS 2026)'
 slidesurl: 
 arxivurl: 'https://arxiv.org/abs/2605.08546'
 paperurl: 

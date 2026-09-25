@@ -2,10 +2,10 @@
 ---
 
 /*
- * This file controls what is imported from /_sass
+ * Main stylesheet entry point.
  *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * This keeps the Academic Pages / Minimal Mistakes import order intact and
+ * adds a small, isolated customization layer at the end.
  */
 
 @import
@@ -17,7 +17,6 @@
 
     "include/mixins",
     "vendor/susy/susy",
-
     "layout/reset",
     "layout/base",
 
@@ -39,10 +38,13 @@
 
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
+    "vendor/font-awesome/brands",
+
+    /* Keep customizations last so they can safely override the theme. */
+    "custom/site-polish"
 ;
 
 ::selection {
-  background: #558C8C;  // background
-  color: #11272D;          // text
+  background: #88C0D0;
+  color: #2E3440;
 }

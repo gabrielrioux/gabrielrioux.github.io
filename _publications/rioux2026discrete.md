@@ -14,5 +14,5 @@ slidesurl:
 arxivurl: 'https://arxiv.org/abs/2609.03094'
 paperurl: 
 bibtexurl: 'http://gabrielrioux.github.io/files/rioux2026discrete.md'
-citation: 'G. Rioux, J. Marks, R. Passeggeri, and Z. Goldfeld. &quot;Discrete Gromov-Wasserstein Duality: Algorithms and Isomorphism Testing&quot; <i>arXiv preprint</i>. arXiv:2609.03094, 2026.'
+citation: 'G. Rioux<sup>★</sup>, J. Marks, R. Passeggeri, and Z. Goldfeld. &quot;Discrete Gromov-Wasserstein Duality: Algorithms and Isomorphism Testing&quot; <i>arXiv preprint</i>. arXiv:2609.03094, 2026.'
 ---

@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an assistant professor at [Purdue University](https://www.purdue.edu/)'s [Department of Statistics](https://www.stat.purdue.edu/) since November 2026.
+I am an assistant professor at [Purdue University](https://www.purdue.edu/)'s [Department of Statistics](https://www.stat.purdue.edu/) as of November 2026.
 Previously, I was a [Chapman Fellow](https://www.imperial.ac.uk/mathematics/research/opportunities/chapman-fellowships/) in Statistics at [Imperial College London](https://www.imperial.ac.uk/)'s [Department of Mathematics](https://www.imperial.ac.uk/mathematics/). 
 
 I received my Ph.D. from [Cornell University](https://www.cornell.edu/)'s [Center for Applied Mathematics](https://cam.cornell.edu/) working under the supervision of Prof. [Ziv Goldfeld](http://people.ece.cornell.edu/zivg/) in the summer of 2025. My [dissertation](https://www.proquest.com/docview/3248399641/previewPDF/65675618C8FA4A9CPQ/1?sourcetype=Dissertations%20&%20Theses) studied statistical and computational properties of optimal transport-based distances, including regularized optimal transport and the Gromov-Wasserstein distance. Before that, I studied at [McGill University](https://mcgill.ca/), earning a B.Sc. in honors Mathematics and Physics in 2019 and a M.Sc. in Mathematics and Statistics in 2020 under the supervision of Prof. [Rustum Choksi](https://math.mcgill.ca/rchoksi) and Prof. [Tim Hoheisel](https://math.mcgill.ca/hoheisel). The subject of my [Master's thesis](https://escholarship.mcgill.ca/concern/theses/2801pm768) was applying the maximum entropy on the mean method to the problem of image deblurring.

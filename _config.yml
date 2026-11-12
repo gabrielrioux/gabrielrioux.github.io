@@ -25,11 +25,11 @@ author:
   avatar           : "avatar.jpg"
   name             : "Gabriel Rioux"
   pronouns         : # example: "she/her"  
-  bio              : "I will be joining Purdue University as an Assistant Professor in Statistics"
+  bio              : "I am an Assistant Professor in Statistics at Purdue University"
   location         : "Indiana, USA"
   employer         : "Purdue University"
   uri              : # URL
-  email            : "g.rioux@imperial.ac.uk" 
+  email            : "grioux@purdue.edu" 
 
   # Academic websites
   academia         : # URL
